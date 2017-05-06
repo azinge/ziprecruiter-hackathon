@@ -17,20 +17,19 @@ export default class Registration extends React.Component {
   showCodeTest() {
   	let { showCodeTest } = this.state
   	this.setState({
-  		showCodeTest: !showCodeTest,
-  		
+  		showCodeTest: !showCodeTest
   	});
   	setTimeout(() => {
   	  this.setState({
-  	  fizzCode: `let n = 0;
-  	  	while (n++ < 100) {
-  	  	  console.log(
-  	  	    n % 15 === 0 ? 'FizzBuzz' :
-  	  	    n % 5 === 0 ? 'Buzz' :
-  	  	    n % 3 === 0 ? 'Fizz' :
-  	  	    n
-  	  	  )
-  	  	}`,
+  	  	fizzCode: `let n = 0;
+while (n++ < 100) {
+  console.log(
+    n % 15 === 0 ? 'FizzBuzz' :
+    n % 5 === 0 ? 'Buzz' :
+    n % 3 === 0 ? 'Fizz' :
+    n
+  )
+}`,
   	  });
   	}, 3000);
   }
