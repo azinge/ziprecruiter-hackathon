@@ -147,6 +147,7 @@ while (n++ < 100) {
                       </div>
                       <div className="col s12">
                         <h5 className="headline">Create a FizzBuzz program</h5>
+                        <hr/>
                         <ul>
                           <li><span className="badge">Python</span></li>
                           <li><span className="badge">C++</span></li>
