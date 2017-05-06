@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Registration.scss';
+import '../styles/Registration.css';
 export default class Registration extends React.Component {
   static propTypes = {
     name: React.PropTypes.string,
