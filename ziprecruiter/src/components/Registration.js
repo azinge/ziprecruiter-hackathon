@@ -77,7 +77,7 @@ while (n++ < 100) {
       	</div>
       	<div className={!showCodeTest ? 'hide' : ''}>
       		<div className="col s12">
-      			<h4>Create a FizzBuzz program</h4>
+      			<h4 style={{fontSize: '300px'}}>Create a FizzBuzz program</h4>
 				<form onSubmit={this.sumbitForm.bind(this)}>
 					<input value={firstName} onChange={this.updateFirstName.bind(this)} placeholder="First Name" type="text" />
 					<input value={lastName} onChange={this.updateLastName.bind(this)} placeholder="Last Name" type="text" />
