@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Router, Route, Link, IndexRoute, hashHistory } from 'react-router';
 import Registration from './components/Registration';
+import ViewChallenges from './components/ViewChallenges';
 import './index.css';
 const Outer = (props) => <div><Links />{props.children}</div>;
 const Contact = () => <div><h1>Contact</h1></div>;
@@ -25,6 +27,7 @@ class App extends React.Component {
       <Router history={ hashHistory }>
         <Route path="/" component={Outer}>
         <Route path="register" component={Registration}></Route>
+        <Route path="challenges" component={ViewChallenges}></Route>
         <Route path="contact" component={Contact}></Route>
         </Route>
       </Router>
