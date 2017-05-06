@@ -18,17 +18,21 @@ export default class Registration extends React.Component {
   	let { showCodeTest } = this.state
   	this.setState({
   		showCodeTest: !showCodeTest,
-  		fizzCode: `let n = 0;
-while (n++ < 100) {
-  console.log(
-    n % 15 === 0 ? 'FizzBuzz' :
-    n % 5 === 0 ? 'Buzz' :
-    n % 3 === 0 ? 'Fizz' :
-    n
-  )
-}`,
+  		
   	});
-  	
+  	setTimeout(() => {
+  	  this.setState({
+  	  fizzCode: `let n = 0;
+  	  	while (n++ < 100) {
+  	  	  console.log(
+  	  	    n % 15 === 0 ? 'FizzBuzz' :
+  	  	    n % 5 === 0 ? 'Buzz' :
+  	  	    n % 3 === 0 ? 'Fizz' :
+  	  	    n
+  	  	  )
+  	  	}`,
+  	  });
+  	}, 3000);
   }
   sumbitForm() {
   	console.log("Submitted")
