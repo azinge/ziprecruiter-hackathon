@@ -4,3 +4,15 @@
 	color: white;
 	height: 250px;
 }
+
+.charity-switch {
+	margin-bottom: 10px;
+}
+
+input[type=text].bitcoin-input {
+	margin-bottom: 10px
+}
+
+.switch label .lever {
+	margin: 0 16px 0 0;
+}
