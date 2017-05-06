@@ -10,6 +10,8 @@ export default class Registration extends React.Component {
     this.state = {
     	showCodeTest: false,
     	codeText: '',
+    	firstName: '',
+    	lastName: '',
     	fizzCode: ''
     }
   }
@@ -31,18 +33,37 @@ while (n++ < 100) {
   )
 }`,
   	  });
-  	}, 3000);
+  	}, 9000);
   }
-  sumbitForm() {
-  	console.log("Submitted")
+  sumbitForm(e) {
+  	e.preventDefault
+  	this.setState({
+  		loading: true 
+  	});
+  	setTimeout(() => {
+		this.setState({
+			loading: false 
+		});
+	}, 3000);	
   }
   updateCode(e) {
 	this.setState({
 		codeText: e.target.value 
 	});
   }
+  updateFirstName(e) {
+	this.setState({
+		firstName: e.target.value 
+	});
+  }
+  updateLastName(e) {
+	this.setState({
+		lastName: e.target.value 
+	});
+  }
+
   render() {
-  	let { showCodeTest, codeText, fizzCode } = this.state
+  	let { showCodeTest, codeText, fizzCode, firstName, lastName, loading } = this.state
   	
     return (
       <div className="container">
@@ -58,16 +79,18 @@ while (n++ < 100) {
       		<div className="col s12">
       			<h4>Create a FizzBuzz program</h4>
 				<form onSubmit={this.sumbitForm.bind(this)}>
+					<input value={firstName} onChange={this.updateFirstName.bind(this)} placeholder="First Name" type="text" />
+					<input value={lastName} onChange={this.updateLastName.bind(this)} placeholder="Last Name" type="text" />
 					<textArea
 						placeholder="Write your code here"
 						onChange={this.updateCode.bind(this)}
 						className="code-form-input blue darken-4"
 						value={fizzCode}
 					>
-						
 					</textArea>
 					<input type="submit" className="btn right" value="Complete Test" />
 				</form>
+				{ loading ? 'Loading...' : '' }
       		</div>
       	</div>
 
