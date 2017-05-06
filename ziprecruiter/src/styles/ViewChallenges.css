@@ -13,8 +13,12 @@
 }
 
 .challenge {
-  background-color: #F6F7F8; 
+  background-color: #F6F7F8;
   padding: 15px;
+}
+
+.challenge:nth-child(odd) {
+    background-color: #FFFFFF;
 }
 
 .new-challenge {
