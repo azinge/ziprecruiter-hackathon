@@ -23,7 +23,7 @@ export default class ChallengeLandingPage extends React.Component {
 	    showModal: false,
 	    showSuccess: true
 	  });
-	}, 3000); 
+	}, 3000);
   }
   updateModalStatus() {
   	let { showModal } = this.state
@@ -35,7 +35,7 @@ export default class ChallengeLandingPage extends React.Component {
   	    hostedURL: 'https://ziprecruiter-hackathon.firebaseapp.com',
   	    repoLink: 'https://github.com/cazinge/ziprecruiter-hackathon.git',
   	  });
-  	}, 3000); 
+  	}, 3000);
   }
   render() {
   	let { showModal, repoLink, hostedURL, loading, showSuccess } = this.state
@@ -50,7 +50,7 @@ export default class ChallengeLandingPage extends React.Component {
   	    width                 : '70vw'
   	  }
   	};
-  	let loadingIndicator 
+  	let loadingIndicator
   	if(loading) {
   	  loadingIndicator = <div className="row">
   	      <div className="col s12 center">
@@ -85,7 +85,7 @@ export default class ChallengeLandingPage extends React.Component {
   			<div className="container">
   				<div className="row">
   					<div className="col s5 center" style={{ marginBottom: '130px' }}>
-						<ReactCountdownClock 
+						<ReactCountdownClock
 							seconds={86400}
 	                     	color="#43a047"
 	                     	alpha={0.9}
@@ -106,11 +106,11 @@ export default class ChallengeLandingPage extends React.Component {
 		  					<div className="col s12">
 		  						<h2>Directions:</h2>
 		  						<p style={{ marginBottom: '40px' }}>
-		  							Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, nulla explicabo veniam 
-		  							maiores suscipit beatae. Ipsa iure debitis autem ea tenetur, ut 
-		  							esse a voluptatum voluptates, similique, recusandae, laudantium molestias. Lorem ipsum dolor 
-		  							sit amet, consectetur adipisicing elit. Nostrum maiores esse, praesentium libero dolor. Odit 
-		  							quas ratione quis fugit at perspiciatis tenetur omnis ullam. Eos doloribus nisi, temporibus vero 
+		  							Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, nulla explicabo veniam
+		  							maiores suscipit beatae. Ipsa iure debitis autem ea tenetur, ut
+		  							esse a voluptatum voluptates, similique, recusandae, laudantium molestias. Lorem ipsum dolor
+		  							sit amet, consectetur adipisicing elit. Nostrum maiores esse, praesentium libero dolor. Odit
+		  							quas ratione quis fugit at perspiciatis tenetur omnis ullam. Eos doloribus nisi, temporibus vero
 		  							quasi?
 		  						</p>
 		  						<p className="center">
@@ -126,13 +126,13 @@ export default class ChallengeLandingPage extends React.Component {
   			  style={customStyles}
   			  contentLabel="Submit"
   			>
-                
+
 			{ loadingIndicator }
 			<div className={!showSuccess ? 'hide' : 'center' }>
 				<h5>Thanks Mike, we'll update you on your submission soon!</h5>
 			</div>
             <form className={loading || showSuccess ? 'hide' : ''} onSubmit={this.submitCode.bind(this)}>
-	            <h5 className="center">Upload Completed Project</h5> 
+	            <h5 className="center">Upload Completed Project</h5>
 				<div className="row">
 					<div className="col s6">
 						<input type="text" value={repoLink} placeholder="Git Repo Link" />

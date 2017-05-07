@@ -172,7 +172,7 @@ while (n++ < 100) {
                   <input type="submit" className={loading || completeForm ? "hide" : "btn right"} value="Complete Test" />
                   <br/><br/>
                   <Modal
-                    isOpen={!showModal}
+                    isOpen={showModal}
                     style={customStyles}
                     contentLabel="Congratulations!"
                   >
