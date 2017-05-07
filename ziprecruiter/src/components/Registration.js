@@ -105,14 +105,15 @@ while (n++ < 100) {
       }
     };
     return (
-      <div style={!showCodeTest ? { background: '#71af05' } : {}}>
+      <div style={!showCodeTest ? { background: '#71af05', paddingBottom: '75px' } : {}}>
         <div className={showCodeTest ? 'hide' : ''}>
-      <div className="col s12 center">
-        <h4 className="white-text" style={{ paddingTop: '15vh', marginTop: '0', marginBottom: '20px' }}>Turn your job search into a Hackathon</h4>
-        <a onClick={this.showCodeTest.bind(this)} className="btn white green-text">
-          Register Now
-        </a>
-        <br/><br/><br/><br/>
+          <div className="row">
+          <div className="col s12 center">
+            <h4 className="white-text" style={{ paddingTop: '75px', marginTop: '0', marginBottom: '20px' }}>Turn your job search into a Hackathon</h4>
+            <a onClick={this.showCodeTest.bind(this)} className="btn white green-text">
+              Register Now
+            </a>
+        </div>
       </div>
         </div>
         <div className={!showCodeTest ? 'hide' : 'container'}>
@@ -171,7 +172,7 @@ while (n++ < 100) {
                   <input type="submit" className={loading || completeForm ? "hide" : "btn right"} value="Complete Test" />
                   <br/><br/>
                   <Modal
-                    isOpen={showModal}
+                    isOpen={!showModal}
                     style={customStyles}
                     contentLabel="Congratulations!"
                   >
