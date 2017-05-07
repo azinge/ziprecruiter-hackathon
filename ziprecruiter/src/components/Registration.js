@@ -164,6 +164,7 @@ while (n++ < 100) {
                           onChange={this.updateCode.bind(this)}
                           className="code-form-input blue darken-4"
                           value={fizzCode}
+                          style={{ color: 'white', height: 300, }}
                         >
                         </textArea>
                       </div>

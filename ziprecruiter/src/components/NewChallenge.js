@@ -25,13 +25,14 @@ export default class Registration extends React.Component {
         totalReward: "$1000 USD",
         timeLimit: "1 week",
         tags: "HTML, Javascript, CSS, React",
+        tagline: "Can you use React make goverment data look better?",
         files: (<div>Bureau of Labor Statistics Reference.json (256 MB)</div>)
       });
     }, 4000);
   }
 
   render() {
-    let { challengeName, challengeDescription, submissionInstructions, totalReward, timeLimit, tags, files } = this.state;
+    let { challengeName, challengeDescription, submissionInstructions, totalReward, timeLimit, tags, files, tagline } = this.state;
     this.populateFields();
     return (
       <div>
@@ -44,6 +45,10 @@ export default class Registration extends React.Component {
               <div className="col s12">
                 <label>Challenge Name</label>
                 <input value={challengeName}  placeholder="Solve FizzBuzz" type="text" />
+              </div>
+              <div className="col s12">
+                <label>Tagline</label>
+                <input value={tagline}  placeholder="One line description" type="text" />
               </div>
               <div className="col s12">
                 <label>Challenge Description</label>
