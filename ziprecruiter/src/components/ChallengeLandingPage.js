@@ -74,8 +74,7 @@ export default class ChallengeLandingPage extends React.Component {
   			<div className="container">
   				<div className="row">
   					<div className="col s12 center white-text">
-  						<h1>Lorem ipsum dolor sit amet.</h1>
-  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, nulla explicabo veniam maiores suscipit beatae. Ipsa iure debitis autem ea tenetur, ut esse a voluptatum voluptates, similique, recusandae, laudantium molestias.</p>
+  						<h1>Visualize Data from the Bureau of Labor Statistics</h1>
   						<a href="#" className="btn white teal-text">Download Files</a>
   						<br/><br/>
   					</div>
@@ -106,12 +105,7 @@ export default class ChallengeLandingPage extends React.Component {
 		  					<div className="col s12">
 		  						<h2>Directions:</h2>
 		  						<p style={{ marginBottom: '40px' }}>
-		  							Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, nulla explicabo veniam
-		  							maiores suscipit beatae. Ipsa iure debitis autem ea tenetur, ut
-		  							esse a voluptatum voluptates, similique, recusandae, laudantium molestias. Lorem ipsum dolor
-		  							sit amet, consectetur adipisicing elit. Nostrum maiores esse, praesentium libero dolor. Odit
-		  							quas ratione quis fugit at perspiciatis tenetur omnis ullam. Eos doloribus nisi, temporibus vero
-		  							quasi?
+		  							Create a Webpage using HTML, Javascript, and CSS Visualizing some form of interesting job statistics from the last year from the given data. Make the webpage interactive and display your data dynamically using React.
 		  						</p>
 		  						<p className="center">
 		  							<span onClick={this.updateModalStatus.bind(this)}className="btn blue white-text">Submit Project</span>
