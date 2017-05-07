@@ -8,6 +8,7 @@ import FinalChallenges from './components/FinalChallenges';
 import NewChallenge from './components/NewChallenge';
 import ChallengeLandingPage from './components/ChallengeLandingPage';
 import ChallengeList from './components/ChallengeList';
+import Profile from './components/Profile'
 import User from './components/User';
 import './index.css';
 
@@ -36,6 +37,7 @@ class App extends React.Component {
       <Router history={ hashHistory }>
         <Route path="/" component={Outer}>
         <Route path="register" component={Registration}></Route>
+        <Route path="profile" component={Profile}></Route>
         <Route path="newchallenge" component={NewChallenge}></Route>
         <Route path="reviewchallenges" component={ViewChallenges}></Route>
         <Route path="finalchallenges" component={FinalChallenges}></Route>
