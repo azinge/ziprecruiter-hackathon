@@ -21,7 +21,8 @@ const Links = () =>
       <img src="https://www.ziprecruiter.com/zrs/092371be/img/logos/ziprecruiter-blacktext.svg" width="155" height="34" style={{"marginTop": "15px"}}/><a href="#" className="brand-logo left" style={{"paddingLeft":"3px", "color":"#343e45", "fontSize": "1.4rem"}}>for Developers</a>
       <ul id="nav-mobile" className="right hide-on-med-and-down">
         <li><Link to="/newchallenge">Create New Challenge</Link></li>
-        <li><Link to="/finalchallenges">View Challenges</Link></li>
+        <li><Link to="/finalchallenges">Your Challenges</Link></li>
+        <li><Link to="/challengelist">View All Challenges</Link></li>
         <li><Link to="/register">Register</Link></li>
       </ul>
     </div>
