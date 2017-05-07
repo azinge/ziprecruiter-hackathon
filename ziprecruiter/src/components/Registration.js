@@ -39,7 +39,7 @@ while (n++ < 100) {
   sumbitForm(e) {
     e.preventDefault()
     this.setState({
-      loading: true 
+      loading: true
     });
     setTimeout(() => {
     this.setState({
@@ -47,36 +47,36 @@ while (n++ < 100) {
       completeForm: true,
       showModal: true,
     });
-  }, 3000); 
+  }, 3000);
   }
   updateCode(e) {
   this.setState({
-    codeText: e.target.value 
+    codeText: e.target.value
   });
   }
   updateFirstName(e) {
   this.setState({
-    firstName: e.target.value 
+    firstName: e.target.value
   });
   }
   updateLastName(e) {
   this.setState({
-    lastName: e.target.value 
+    lastName: e.target.value
   });
   }
   updateLocation(e) {
     this.setState({
-      userLocation: e.target.value 
+      userLocation: e.target.value
     });
   }
   updateBitcoinAddress(e) {
     this.setState({
-      bitcoinAddress: e.target.value 
+      bitcoinAddress: e.target.value
     });
   }
   render() {
     let { showCodeTest, codeText, fizzCode, firstName, lastName, loading, userLocation, completeForm, bitcoinAddress, showModal } = this.state
-    let loadingIndicator 
+    let loadingIndicator
     if(loading) {
       loadingIndicator = <div className="row">
           <div className="col s12 center">
@@ -148,6 +148,7 @@ while (n++ < 100) {
                       <div className="col s12">
                         <h5 className="headline">Create a FizzBuzz program</h5>
                         <hr/>
+                        <div>Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.</div>
                         <ul>
                           <li><span className="badge">Python</span></li>
                           <li><span className="badge">C++</span></li>
@@ -166,7 +167,7 @@ while (n++ < 100) {
                         </textArea>
                       </div>
                   </div>
-                  {loadingIndicator} 
+                  {loadingIndicator}
                   <input type="submit" className={loading || completeForm ? "hide" : "btn right"} value="Complete Test" />
                   <br/><br/>
                   <Modal
@@ -177,7 +178,7 @@ while (n++ < 100) {
                         <div className="container">
                             <div className="row">
                               <div className="col s12 center">
-                                  <h1>Congratulations!</h1>     
+                                  <h1>Congratulations!</h1>
                                   <img src='https://s3-us-west-2.amazonaws.com/ziprecruiter-hackathon/javascriptBadge.png' width="200" />
                                   <h5><a href="http://www.blockchain.info" target="_blank">You've earned $1.00</a> and a new Javascript badge for passing the FizzBuzz challenge. <br/> <br/>We will send you new challenges from our partners soon!</h5>
                               </div>
