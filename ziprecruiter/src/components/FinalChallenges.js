@@ -114,13 +114,13 @@ export default class Registration extends React.Component {
                       <img src="https://www.bls.gov/careeroutlook/2014/images/dod_educationpays.jpg" alt="" width="625px" height="275px"  />
                     </div>
                     <div className="col s6 center" style={{"marginTop": "15px"}}>
-                        <Link to='/user' className="waves-effect waves-light btn-large new-challenge">Accept User's Submission</Link>
+                        <Link to='/profile' className="waves-effect waves-light btn-large new-challenge">Accept User's Submission</Link>
                     </div>
                     <div className="col s6 center" style={{"marginTop": "15px"}}>
-                        <Link to='/user' className="waves-effect waves-light btn-large new-challenge red">Decline User's Submission</Link>
+                        <Link to='/profile' className="waves-effect waves-light btn-large new-challenge red">Decline User's Submission</Link>
                     </div>
                     <div className="col s12 center" style={{"marginTop": "15px"}}>
-                        <Link to='/user' className="waves-effect waves-light btn-large new-challenge blue">View Code</Link>
+                        <Link to='/profile' className="waves-effect waves-light btn-large new-challenge blue">View Code</Link>
                     </div>
                   </div>
               </div>

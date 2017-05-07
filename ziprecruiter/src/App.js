@@ -8,8 +8,7 @@ import FinalChallenges from './components/FinalChallenges';
 import NewChallenge from './components/NewChallenge';
 import ChallengeLandingPage from './components/ChallengeLandingPage';
 import ChallengeList from './components/ChallengeList';
-import Profile from './components/Profile'
-import User from './components/User';
+import Profile from './components/Profile';
 import './index.css';
 
 const Outer = (props) => <div><Links />{props.children}</div>;
@@ -43,7 +42,6 @@ class App extends React.Component {
         <Route path="finalchallenges" component={FinalChallenges}></Route>
         <Route path="challengelist" component={ChallengeList}></Route>
         <Route path="challengelanding" component={ChallengeLandingPage}></Route>
-        <Route path="user" component={User}></Route>
         </Route>
       </Router>
     );
