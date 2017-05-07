@@ -190,7 +190,7 @@ while (n++ < 100) {
                                 <div className="col s12 center">
                                     <h1>Congratulations!</h1>
                                     <img src='https://s3-us-west-2.amazonaws.com/ziprecruiter-hackathon/javascriptBadge.png' width="200" />
-                                    <h5><a href="http://www.blockchain.info" target="_blank">You've earned $1.00</a> and a new Javascript badge for passing the FizzBuzz challenge. <br/> <br/>We will send you new challenges from our partners soon!</h5>
+                                    <h5><a href="https://live.blockcypher.com/btc/tx/057aa0dcf89e851e3419e2926f74020cac945d0c28889c479609be22db662bf6/" target="_blank">You've earned $1.00</a> and a new Javascript badge for passing the FizzBuzz challenge. <br/> <br/>We will send you new challenges from our partners soon!</h5>
                                 </div>
                               </div>
                               
