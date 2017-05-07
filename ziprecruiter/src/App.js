@@ -6,6 +6,7 @@ import Registration from './components/Registration';
 import ViewChallenges from './components/ViewChallenges';
 import NewChallenge from './components/NewChallenge';
 import ChallengeLandingPage from './components/ChallengeLandingPage'
+import ChallengeList from './components/ChallengeList'
 import './index.css';
 
 const Outer = (props) => <div><Links />{props.children}</div>;
@@ -18,7 +19,7 @@ const Links = () =>
       <img src="https://www.ziprecruiter.com/zrs/092371be/img/logos/ziprecruiter-blacktext.svg" width="155" height="34" style={{"marginTop": "15px"}}/><a href="#" className="brand-logo left" style={{"paddingLeft":"3px", "color":"#343e45", "fontSize": "1.4rem"}}>for Developers</a>
       <ul id="nav-mobile" className="right hide-on-med-and-down">
         <li><Link to="/newchallenge">Create New Challenge</Link></li>
-        <li><Link to="/challenges">View Challenges</Link></li>
+        <li><Link to="/reviewchallenges">View Challenges</Link></li>
         <li><Link to="/register">Register</Link></li>
       </ul>
     </div>
@@ -33,7 +34,8 @@ class App extends React.Component {
         <Route path="/" component={Outer}>
         <Route path="register" component={Registration}></Route>
         <Route path="newchallenge" component={NewChallenge}></Route>
-        <Route path="challenges" component={ViewChallenges}></Route>
+        <Route path="reviewchallenges" component={ViewChallenges}></Route>
+        <Route path="challengelist" component={ChallengeList}></Route>
         <Route path="challengelanding" component={ChallengeLandingPage}></Route>
         </Route>
       </Router>
