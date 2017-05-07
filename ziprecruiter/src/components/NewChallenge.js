@@ -25,7 +25,7 @@ export default class Registration extends React.Component {
         totalReward: "$1000 USD",
         timeLimit: "1 week",
         tags: "HTML, Javascript, CSS, React",
-        tagline: "Can you use React make goverment data look better?",
+        tagline: "Visualize last year's job statistics using HTML, CSS, and Javascript!",
         files: (<div>Bureau of Labor Statistics Reference.json (256 MB)</div>)
       });
     }, 4000);

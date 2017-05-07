@@ -48,6 +48,12 @@ while (n++ < 100) {
       showModal: true,
     });
   }, 3000);
+
+      setTimeout(() => {
+      this.setState({
+        showModal: false,
+      });
+    }, 13000);
   }
   updateCode(e) {
   this.setState({
@@ -105,90 +111,114 @@ while (n++ < 100) {
       }
     };
     return (
-      <div style={!showCodeTest ? { background: '#71af05', paddingBottom: '75px' } : {}}>
-        <div className={showCodeTest ? 'hide' : ''}>
-          <div className="row">
-          <div className="col s12 center">
-            <h4 className="white-text" style={{ paddingTop: '75px', marginTop: '0', marginBottom: '20px' }}>Turn your job search into a Hackathon</h4>
-            <a onClick={this.showCodeTest.bind(this)} className="btn white green-text">
-              Register Now
-            </a>
+      <div>
+        <div style={!showCodeTest ? { background: '#71af05', paddingBottom: '75px' } : {}}>
+          <div className={showCodeTest ? 'hide' : ''}>
+            <div className="row">
+            <div className="col s12 center">
+              <h4 className="white-text" style={{ paddingTop: '75px', marginTop: '0', marginBottom: '20px' }}>Turn your job search into a Hackathon</h4>
+              <a onClick={this.showCodeTest.bind(this)} className="btn white green-text">
+                Register Now
+              </a>
+          </div>
         </div>
-      </div>
-        </div>
-        <div className={!showCodeTest ? 'hide' : 'container'}>
-          <div className="row">
-              <div className="col s12">
-                <h4>Register</h4>
-                <hr/>
-                <form onSubmit={this.sumbitForm.bind(this)}>
-                  <div className="row">
-                      <div className="col s6">
-                        <label>First Name</label>
-                        <input value={firstName} onChange={this.updateFirstName.bind(this)} placeholder="Ada" type="text" />
-                      </div>
-                      <div className="col s6">
-                        <label>Last Name</label>
-                        <input value={lastName} onChange={this.updateLastName.bind(this)} placeholder="Lovelace" type="text" />
-                      </div>
-                      <div className="col s6">
-                        <label>Location</label>
-                        <input value={userLocation} onChange={this.updateLocation.bind(this)} placeholder="What city are you in?" type="text" />
-                      </div>
-                      <div className="col s6">
-                        <label>Bitcoin Address</label>
-                        <input value={bitcoinAddress} className="bitcoin-input" onChange={this.updateBitcoinAddress.bind(this)} placeholder="1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa" type="text" />
-                        <div className="switch charity-switch">
-                            <label>
-                              <input type="checkbox" />
-                              <span className="lever"></span>
-                              Donate to my prize charity
-                            </label>
-                          </div>
-                      </div>
-                      <div className="col s12">
-                        <h5 className="headline">Create a FizzBuzz program</h5>
-                        <hr/>
-                        <div>Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.</div>
-                        <ul>
-                          <li><span className="badge">Python</span></li>
-                          <li><span className="badge">C++</span></li>
-                          <li><span className="badge">PHP</span></li>
-                          <li><span className="badge">Java</span></li>
-                          <li><span className="badge">Perl</span></li>
-                          <li><span className="badge" style={{fontWeight: '300', fontSize: '0.8rem', color: 'white', background: '#26a69a', borderRadius: '2px'}}>JS</span></li>
-                        </ul>
-                        <br/><br/>
-                        <textArea
-                          placeholder="Write your code here"
-                          onChange={this.updateCode.bind(this)}
-                          className="code-form-input blue darken-4"
-                          value={fizzCode}
-                          style={{ color: 'white', height: 300, }}
-                        >
-                        </textArea>
-                      </div>
-                  </div>
-                  {loadingIndicator}
-                  <input type="submit" className={loading || completeForm ? "hide" : "btn right"} value="Complete Test" />
-                  <br/><br/>
-                  <Modal
-                    isOpen={showModal}
-                    style={customStyles}
-                    contentLabel="Congratulations!"
-                  >
-                        <div className="container">
-                            <div className="row">
-                              <div className="col s12 center">
-                                  <h1>Congratulations!</h1>
-                                  <img src='https://s3-us-west-2.amazonaws.com/ziprecruiter-hackathon/javascriptBadge.png' width="200" />
-                                  <h5><a href="http://www.blockchain.info" target="_blank">You've earned $1.00</a> and a new Javascript badge for passing the FizzBuzz challenge. <br/> <br/>We will send you new challenges from our partners soon!</h5>
-                              </div>
+        
+          </div>
+          <div className={!showCodeTest ? 'hide' : 'container'}>
+            <div className="row">
+                <div className="col s12">
+                  <h4>Register</h4>
+                  <hr/>
+                  <form onSubmit={this.sumbitForm.bind(this)}>
+                    <div className="row">
+                        <div className="col s6">
+                          <label>First Name</label>
+                          <input value={firstName} onChange={this.updateFirstName.bind(this)} placeholder="Ada" type="text" />
+                        </div>
+                        <div className="col s6">
+                          <label>Last Name</label>
+                          <input value={lastName} onChange={this.updateLastName.bind(this)} placeholder="Lovelace" type="text" />
+                        </div>
+                        <div className="col s6">
+                          <label>Location</label>
+                          <input value={userLocation} onChange={this.updateLocation.bind(this)} placeholder="What city are you in?" type="text" />
+                        </div>
+                        <div className="col s6">
+                          <label>Bitcoin Address</label>
+                          <input value={bitcoinAddress} className="bitcoin-input" onChange={this.updateBitcoinAddress.bind(this)} placeholder="1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa" type="text" />
+                          <div className="switch charity-switch">
+                              <label>
+                                <input type="checkbox" />
+                                <span className="lever"></span>
+                                Donate to my prize charity
+                              </label>
                             </div>
                         </div>
-                  </Modal>
-                </form>
-              </div>
+                        <div className="col s12">
+                          <h5 className="headline">Create a FizzBuzz program</h5>
+                          <hr/>
+                          <div>Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.</div>
+                          <ul>
+                            <li><span className="badge">Python</span></li>
+                            <li><span className="badge">C++</span></li>
+                            <li><span className="badge">PHP</span></li>
+                            <li><span className="badge">Java</span></li>
+                            <li><span className="badge">Perl</span></li>
+                            <li><span className="badge" style={{fontWeight: '300', fontSize: '0.8rem', color: 'white', background: '#26a69a', borderRadius: '2px'}}>JS</span></li>
+                          </ul>
+                          <br/><br/>
+                          <textArea
+                            placeholder="Write your code here"
+                            onChange={this.updateCode.bind(this)}
+                            className="code-form-input blue darken-4"
+                            value={fizzCode}
+                            style={{ color: 'white', height: 300, }}
+                          >
+                          </textArea>
+                        </div>
+                    </div>
+                    {loadingIndicator}
+                    <input type="submit" className={loading || completeForm ? "hide" : "btn right"} value="Complete Test" />
+                    <br/><br/>
+                    <Modal
+                      isOpen={showModal}
+                      style={customStyles}
+                      contentLabel="Congratulations!"
+                    >
+                          <div className="container">
+                              <div className="row">
+                                <div className="col s12 center">
+                                    <h1>Congratulations!</h1>
+                                    <img src='https://s3-us-west-2.amazonaws.com/ziprecruiter-hackathon/javascriptBadge.png' width="200" />
+                                    <h5><a href="http://www.blockchain.info" target="_blank">You've earned $1.00</a> and a new Javascript badge for passing the FizzBuzz challenge. <br/> <br/>We will send you new challenges from our partners soon!</h5>
+                                </div>
+                              </div>
+                              
+                          </div>
+                    </Modal>
+                  </form>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div className={showCodeTest ? 'hide' : 'white'}>
+          <br/><br/>
+          <h3 className="center">Why should I join?</h3>
+          <div className="row" style={{ marginTop: 0 }}>
+            <div className="col s4 center">
+                <img src="https://s3-us-west-2.amazonaws.com/ziprecruiter-hackathon/CodeCred.png"  width="300" />
+                <h5><b>Earn Cash</b></h5>
+            </div>
+            <div className="col s4 center">
+                <img src="https://s3-us-west-2.amazonaws.com/ziprecruiter-hackathon/Code.png"  width="300" />
+                <h5><b>Rack up CodeCred</b></h5>
+            </div>
+            <div className="col s4 center">
+                <img src="https://s3-us-west-2.amazonaws.com/ziprecruiter-hackathon/Job.png"  width="300" />
+                <h5><b>Find a job!</b></h5>
+            <br/><br/><br/>
+
+            </div>
           </div>
         </div>
       </div>
